@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WebStore.Data\WebStore.Data.csproj" />
+    <ProjectReference Include="..\WebStore.Data\WebStore.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

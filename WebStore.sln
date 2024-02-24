@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore", "WebStore\WebStore.csproj", "{A903C420-41D5-4662-A99C-0C8899E7E248}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore", "WebStore\WebStore.csproj", "{A903C420-41D5-4662-A99C-0C8899E7E248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.Core", "WebStore.Core\WebStore.Core.csproj", "{E86AAB8C-92DD-4761-BF8E-0C52D503B5E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.Core", "WebStore.Core\WebStore.Core.csproj", "{E86AAB8C-92DD-4761-BF8E-0C52D503B5E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebStore.Data", "WebStore.Data\WebStore.Data.csproj", "{1DAC8FC5-FB05-416D-AD5D-4481A42792CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebStore.Infrastructure", "WebStore.Data\WebStore.Infrastructure.csproj", "{1DAC8FC5-FB05-416D-AD5D-4481A42792CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
