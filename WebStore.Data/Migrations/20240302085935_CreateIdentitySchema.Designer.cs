@@ -9,10 +9,10 @@ using WebStore.Data;
 
 #nullable disable
 
-namespace WebStore.Data.Migrations
+namespace WebStore.Infrastructure.Migrations
 {
     [DbContext(typeof(WebStoreDbContext))]
-    [Migration("20240222103844_CreateIdentitySchema")]
+    [Migration("20240302085935_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
         /// <inheritdoc />

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WebStore.Data.Migrations
+namespace WebStore.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class CreateIdentitySchema : Migration
