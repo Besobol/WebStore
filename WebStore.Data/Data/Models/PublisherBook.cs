@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebStore.Infrastructure.Models
+namespace WebStore.Infrastructure.Data.Models
 {
     [Comment("Mapping table for Publisher and Book")]
-    [PrimaryKey(nameof(PublisherId),nameof(BookId))]
+    [PrimaryKey(nameof(PublisherId), nameof(BookId))]
     public class PublisherBook
     {
         [Comment("Publisher Identifier")]

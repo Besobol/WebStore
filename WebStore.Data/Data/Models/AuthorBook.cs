@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebStore.Infrastructure.Models
+namespace WebStore.Infrastructure.Data.Models
 {
     [Comment("Mapping table for Authors and Books")]
     [PrimaryKey(nameof(AuthorId), nameof(BookId))]

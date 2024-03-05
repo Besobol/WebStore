@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebStore.Infrastructure.Models
+namespace WebStore.Infrastructure.Data.Models
 {
     [Comment("Mapping table for Genre and Book")]
-    [PrimaryKey(nameof(GenreId),nameof(BookId))]
+    [PrimaryKey(nameof(GenreId), nameof(BookId))]
     public class GenreBook
     {
         [Comment("Genre Identifier")]

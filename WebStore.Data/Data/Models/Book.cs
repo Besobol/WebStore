@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using static WebStore.Infrastructure.DataConstants.DataConstants.Book;
 
-namespace WebStore.Infrastructure.Models
+namespace WebStore.Infrastructure.Data.Models
 {
     [Comment("Book")]
     public class Book

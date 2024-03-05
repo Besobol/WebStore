@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using static WebStore.Infrastructure.DataConstants.DataConstants.Publisher;
 
-namespace WebStore.Infrastructure.Models
+namespace WebStore.Infrastructure.Data.Models
 {
     [Comment("Book Publisher")]
     public class Publisher

@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebStore.Infrastructure.Models
+namespace WebStore.Infrastructure.Data.Models
 {
     [Comment("Mapping table for Store and Book")]
-    [PrimaryKey(nameof(StoreId),nameof(BookId))]
+    [PrimaryKey(nameof(StoreId), nameof(BookId))]
     public class StoreBook
     {
         [Comment("Store Identifier")]

@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using WebStore.Infrastructure.Models;
+using WebStore.Infrastructure.Data.Models;
 
-namespace WebStore.Data
+namespace WebStore.Infrastructure.Data
 {
     public class WebStoreDbContext : IdentityDbContext
     {
