@@ -1,0 +1,33 @@
+﻿@model WebStore.Core.Models.BookModel
+
+@{
+    ViewData["Title"] = "Add Book";
+}
+
+<h2>Add Book</h2>
+
+<form asp-action="AddBook" method="post">
+    <div class="mb-3">
+        <label asp-for="@Model.Title" class="form-label-add-edit">Title</label>
+        <input asp-for="@Model.Title" class="form-control" aria-required="true" />
+        <span asp-validation-for="@Model.Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Summery" class="form-label-add-edit">Summery</label>
+        <textarea asp-for="@Model.Summery" class="form-control" aria-required="true" rows="5"></textarea>
+        <span asp-validation-for="Summery" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Price" class="form-label-add-edit">Price</label>
+        <input asp-for="@Model.Price" type="number" step=".01" class="form-control" aria-required="true" />
+        <span asp-validation-for="@Model.Price" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.ImgPath" class="form-label-add-edit">Image path</label>
+        <input asp-for="@Model.ImgPath" type="url" class="form-control" aria-required="true" />
+        <span asp-validation-for="@Model.ImgPath" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn btn-warning mb-2 w-100 p-3 fw-bold" type="submit" value="Add" />
+    </div>
+</form>
