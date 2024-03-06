@@ -4,21 +4,15 @@ using WebStore.Infrastructure.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("WebStoreDbContextConnection") ?? throw new InvalidOperationException("Connection string 'WebStoreDbContextConnection' not found.");
-builder.Services.AddDbContext<WebStoreDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddApplicationDbContext(builder.Configuration);
+builder.Services.AddApplicationIdentity(builder.Configuration);
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options =>
-    {
-        options.SignIn.RequireConfirmedAccount = true;
-    })
-    .AddEntityFrameworkStores<WebStoreDbContext>();
-
-// Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddApplicationServices();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

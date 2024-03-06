@@ -23,4 +23,9 @@
     <ProjectReference Include="..\WebStore.Core\WebStore.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ModelBinders\" />
+    <Folder Include="Views\Store\" />
+  </ItemGroup>
+
 </Project>
