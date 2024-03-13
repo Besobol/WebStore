@@ -8,7 +8,7 @@ namespace WebStore.Infrastructure.DataConstants
 {
     public static class DataConstants
     {
-        private const int pricePrecisionWhole = 4;
+        private const int pricePrecisionWhole = 6;
         private const int pricePrecisionDecimal = 2;
 
         public static class Book
@@ -21,6 +21,8 @@ namespace WebStore.Infrastructure.DataConstants
 
             public const int PricePrecisionWhole = pricePrecisionWhole;
             public const int PricePrecisionDecimal = pricePrecisionDecimal;
+
+            public const int ImgPathMaxLength = 500;
         }
 
         public static class UsedBook

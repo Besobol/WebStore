@@ -28,6 +28,7 @@ namespace WebStore.Infrastructure.Data.Models
 
         [Required]
         [Comment("Path to Book Images")]
+        [StringLength(ImgPathMaxLength)]
         public required string ImgPath { get; set; }
 
         public List<AuthorBook> AuthorsBooks { get; set; } = new();
