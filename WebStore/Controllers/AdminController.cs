@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebStore.Core.Contracts;
 using WebStore.Core.Models;
 
 namespace WebStore.Controllers
 {
     public class AdminController : BaseController
     {
+        readonly IAdminService adminService;
+
+        public AdminController(IAdminService _adminService)
+        {
+            adminService = _adminService;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -17,8 +25,10 @@ namespace WebStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddAuthor(AuthorModel model)
+        public async Task<IActionResult> AddAuthor(AuthorModel model)
         {
+
+            await adminService.AddAuthorAsync(model);
 
             return RedirectToAction(nameof(Index));
         }
@@ -30,8 +40,10 @@ namespace WebStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPublisher(PublisherModel model)
+        public async Task<IActionResult> AddPublisher(PublisherModel model)
         {
+
+            await adminService.AddPublisherAsync(model);
 
             return RedirectToAction(nameof(Index));
         }
@@ -43,8 +55,10 @@ namespace WebStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddStore(StoreModel model)
+        public async Task<IActionResult> AddStore(StoreModel model)
         {
+
+            await adminService.AddStoreAsync(model);
 
             return RedirectToAction(nameof(Index));
         }
@@ -56,8 +70,9 @@ namespace WebStore.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBook(BookModel model)
+        public async Task<IActionResult> AddBook(BookModel model)
         {
+            await adminService.AddBookAsync(model);
 
             return RedirectToAction(nameof(Index));
         }

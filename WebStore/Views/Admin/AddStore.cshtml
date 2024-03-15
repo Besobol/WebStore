@@ -1,5 +1,23 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model WebStore.Core.Models.StoreModel
+
 @{
+    ViewData["Title"] = "Add Author";
 }
+
+<h2>Add Store</h2>
+
+<form asp-action="AddStore" method="post">
+    <div class="mb-3">
+        <label asp-for="@Model.Name" class="form-label-add-edit">Name</label>
+        <input asp-for="@Model.Name" class="form-control" aria-required="true" />
+        <span asp-validation-for="@Model.Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="@Model.Website" class="form-label-add-edit">Website</label>
+        <input asp-for="@Model.Website" type="url" class="form-control" aria-required="true" />
+        <span asp-validation-for="Website" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <input class="btn btn-warning mb-2 w-100 p-3 fw-bold" type="submit" value="Add" />
+    </div>
+</form>
