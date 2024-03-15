@@ -16,9 +16,10 @@ namespace WebStore.Infrastructure.Data.Models
         [Comment("Store Name")]
         public required string Name { get; set; }
 
+        [Required]
         [MaxLength(WebsiteMaxLength)]
         [Comment("Store Website")]
-        public string? Website { get; set; }
+        public required string Website { get; set; }
 
         public List<StoreBook> StoresBooks { get; set; } = new();
     }
