@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WebStore.Infrastructure.Data.Models;
+using WebStore.Infrastructure.Data.SeedDb;
 
 namespace WebStore.Infrastructure.Data
 {
@@ -23,6 +24,19 @@ namespace WebStore.Infrastructure.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            // Add base data seed
+            builder.ApplyConfiguration(new AuthorConfiguration());
+            builder.ApplyConfiguration(new BookConfiguration());
+            builder.ApplyConfiguration(new GenreConfiguration());
+            builder.ApplyConfiguration(new PublisherConfiguration());
+            builder.ApplyConfiguration(new StoreConfiguration());
+
+            // Add mapping table data seed
+            builder.ApplyConfiguration(new AuthorBookConfiguration());
+            builder.ApplyConfiguration(new GenreBookConfiguration());
+            builder.ApplyConfiguration(new PublisherBookConfiguration());
+            builder.ApplyConfiguration(new StoreBookConfiguration());
+
             base.OnModelCreating(builder);
         }
     }

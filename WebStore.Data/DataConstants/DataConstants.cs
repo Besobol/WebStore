@@ -13,10 +13,10 @@ namespace WebStore.Infrastructure.DataConstants
 
         public static class Book
         {
-            public const int TitleMaxLength = 50;
+            public const int TitleMaxLength = 150;
             public const int TitleMinLength = 3;
 
-            public const int SummeryMaxLength = 2000;
+            public const int SummeryMaxLength = 4000;
             public const int SummeryMinLength = 300;
 
             public const int PricePrecisionWhole = pricePrecisionWhole;
@@ -39,7 +39,7 @@ namespace WebStore.Infrastructure.DataConstants
             public const int NameMaxLength = 100;
             public const int NameMinLength = 3;
 
-            public const int DescriptionMaxLength = 500;
+            public const int DescriptionMaxLength = 1000;
             public const int DescriptionMinLength = 10;
         }
 
@@ -48,7 +48,7 @@ namespace WebStore.Infrastructure.DataConstants
             public const int NameMaxLength = 100;
             public const int NameMinLength = 2;
 
-            public const int DescriptionMaxLength = 500;
+            public const int DescriptionMaxLength = 1000;
             public const int DescriptionMinLength = 10;
         }
 
@@ -62,12 +62,7 @@ namespace WebStore.Infrastructure.DataConstants
 
         public static class Genre
         {
-            public const int NameMaxLength = 20;
-        }
-
-        public static class Condition
-        {
-            public const int NameMaxLength = 20;
+            public const int NameMaxLength = 50;
         }
 
     }
