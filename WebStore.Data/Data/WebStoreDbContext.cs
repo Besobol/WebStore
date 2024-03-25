@@ -5,7 +5,7 @@ using WebStore.Infrastructure.Data.SeedDb;
 
 namespace WebStore.Infrastructure.Data
 {
-    public class WebStoreDbContext : IdentityDbContext
+    public class WebStoreDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>
     {
         public WebStoreDbContext(DbContextOptions<WebStoreDbContext> options)
             : base(options)
@@ -30,12 +30,15 @@ namespace WebStore.Infrastructure.Data
             builder.ApplyConfiguration(new GenreConfiguration());
             builder.ApplyConfiguration(new PublisherConfiguration());
             builder.ApplyConfiguration(new StoreConfiguration());
+            //builder.ApplyConfiguration(new UserConfiguration());
+            //builder.ApplyConfiguration(new RoleConfiguration());
 
             // Add mapping table data seed
             builder.ApplyConfiguration(new AuthorBookConfiguration());
             builder.ApplyConfiguration(new GenreBookConfiguration());
             builder.ApplyConfiguration(new PublisherBookConfiguration());
             builder.ApplyConfiguration(new StoreBookConfiguration());
+            //builder.ApplyConfiguration(new UserRoleConfiguration());
 
             base.OnModelCreating(builder);
         }
