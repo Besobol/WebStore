@@ -1,17 +1,19 @@
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using WebStore.Infrastructure.Data;
+using WebStore.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationDbContext(builder.Configuration);
-builder.Services.AddApplicationIdentity(builder.Configuration);
+builder.Services.AddApplicationIdentity();
 
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddApplicationServices();
 
+builder.Services.AddApplicationPolicies();
+
 var app = builder.Build();
+
+app.SeedAdmin();
 
 if (!app.Environment.IsDevelopment())
 {
